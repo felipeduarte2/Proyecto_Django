@@ -1,0 +1,56 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block titulo %} {% endblock %} | Sitio de Tecnologías</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css'%}">
+</head>
+
+<body>
+    <header>
+        <h1>Sitio de tecnologías</h1>
+    </header>
+
+    <div class="rayas">&equiv;</div>
+    <nav class="mobile mostrar">
+        <div class="item-mobile" ><a href="{% url 'principal' %}">Principal</a></div>
+        <div class="item-mobile" ><a href="{% url 'web' %}">Web</a></div>
+        <div class="item-mobile" ><a href="{% url 'python' %}">Python</a></div>
+        <div class="item-mobile" >Inteligencia Artificial</div>
+    </nav>
+
+    <nav class="menu">
+        <div class="item-menu" ><a href="{% url 'principal' %}">Principal</a></div>
+        <div class="item-menu" ><a href="{% url 'web' %}">Web</a></div>
+        <div class="item-menu" ><a href="{% url 'python' %}">Python</a></div>
+        <div class="item-menu" >Inteligencia Artificial</div>
+    </nav>
+    <section id="entrada">
+        {% block contenido %} {% endblock%}
+        {% comment %} <img src="{% static 'images/logo-TecNM.png' %}" alt="Ittsy"> {% endcomment %}
+    </section>
+    <aside id="detalles">
+        <h4>Noticias</h4>
+        <article>
+            <p>Ubuntu llega al mundo con la primera familia de portátiles RISC-V</p>
+        </article>
+        <article>
+            <p>Al leer GNU Linux se ha de entender como: no es UNIX ...</p>
+        </article>
+        <article>
+            <p>El comando apt-get de gnome es empleado para instalar, desinstalar, descargar instaladores, etc., de los
+                servidores de repositorios configurados en el sistema operativo ... </p>
+        </article>
+        <article>
+            <p>Otros avances sobre software libre en ...</p>
+        </article>
+    </aside>
+    <footer>Derechos reservados <br> By Felipe Duarte</footer>
+    <script type="text/javascript" src="{% static 'js/accion.js'%}"></script>
+</body>
+</html>

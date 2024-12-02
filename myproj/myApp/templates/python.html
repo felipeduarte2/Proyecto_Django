@@ -1,0 +1,91 @@
+{% extends 'plantilla.html' %}
+{% load static %}
+{% block titulo %}Python{% endblock %}
+{% block contenido %}
+<article>
+<h2>Lenguaje Python</h2>
+<p>Parte del ecosistema de Python ordenado radialmente.
+Donde cada nivel se apoya sobre los inferiores.</p>
+<img src="{% static 'images/python-Stack.png' %}"
+width="360" />
+</article>
+
+<article>
+    <h2>Contenido de La Base De Datos</h2>
+    {% if messages %}
+        {% for m in  messages%}
+        <div class="mensaje success" 
+        >{{m}}</div>
+        {% endfor %}
+    {% endif %}
+    {% if sw %}
+        <table>
+            {% for fila in sw %}
+                {% for columna in fila %}
+                <tr>
+                    <td>{{columna.id}}</td>
+                    <td>{{columna.nivel}}</td>
+                    <td>{{columna.nombre}}</td>
+                    <td>{{columna.define}}</td>
+                    <td>
+                        <a href="{% url "borrar_software" columna.id %}">Borrar</a>
+                    </td> 
+                </tr>
+                {% endfor %}
+            {% endfor %}
+        </table>
+    {% endif %} 
+    {% include "paginacion.html" %}
+</article>
+
+<article>
+    <h2>Formulario - Get</h2>
+    <form action="{% url 'guardar_sw_get' %}" method="get">
+        <fieldset>
+            <legend>Herramienta de software</legend>
+            <label for="nivel">Nivel:</label>
+            <select id="nivel" name="nivel">
+                <option value="0">Nivel 0</option>
+                <option value="1">Nivel 1</option>
+                <option value="2">Nivel 2</option>
+                <option value="3">Nivel 3</option>
+                <option value="4">Nivel 4</option>
+            </select>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{nombre}}">
+            <br>
+            <label for="define">Define:</label>
+            <textarea id="define" name="define" rows="2"></textarea>
+            {% comment %} <input type="text" id="define" name="define" value="{{define}}"> {% endcomment %}
+            <br>
+        <input type="submit" value="Guardar">
+    </form>
+</article>
+
+<article>
+    <h2>Formulario - Post</h2>
+    <form action="{% url 'guardar_sw_post' %}" method="Post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Herramienta de software</legend>
+            <label for="nivel">Nivel:</label>
+            <select id="nivel" name="nivel">
+                <option value="0">Nivel 0</option>
+                <option value="1">Nivel 1</option>
+                <option value="2">Nivel 2</option>
+                <option value="3">Nivel 3</option>
+                <option value="4">Nivel 4</option>
+            </select>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="{{nombre}}">
+            <br>
+            <label for="define">Define:</label>
+            <textarea id="define" name="define" rows="2"></textarea>
+            <br>
+        <input type="submit" value="Guardar">
+    </form>
+</article>
+
+{% endblock %}

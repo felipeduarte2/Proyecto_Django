@@ -1,0 +1,80 @@
+{% extends 'plantilla.html' %}
+{% block titulo %}Web{% endblock %}
+{% block contenido %}
+<article>
+<h2>World Wide Web</h2>
+<p>Sistema que funciona a través de internet, 
+transmitiendo datos por HTTP.</p>
+</article>
+
+{% comment %} <article>
+    <h2>Variables</h2>
+    <p>Protocolo: {{ protocolo }}</p>
+    <p>Frontend: {{ frontend }}</p>
+    <p>Backend: {{ backend }}</p>
+</article> {% endcomment %}
+
+{% comment %} <article>
+    <h2>Condicional if</h2>
+    {% if autor %}
+    <p>Autor: {{autor}}</p>
+    {% else %}
+    <p>Autor: Anónimo</p>
+    {% endif %}
+</article> {% endcomment %}
+
+{% comment %} <article>
+    <h2>Ciclo for</h2>
+    <ul>
+    {% for f in frontend %}
+    <li>{{f}} {{forloop.counter0}} </li>
+    {% empty %}
+    <p>Lista vacía</p>
+    {% endfor %}
+    </ul>
+</article> {% endcomment %}
+
+<article>
+    <h2>Include</h2>
+    {% include "tecnm.html" with campus="ITS del Sur del Estado de Yucatán" %}
+</article>
+
+{% comment %} <article>
+    <h2>Filtros en textos</h2>
+    <ul>
+        <li>cut - {{ protocolo|cut:'de' }}</li>
+        <li>default - {{ autor|default:'anonimo' }}</li>
+        <li>length - {{ protocolo|length }}</li>
+        <li>lower - {{ protocolo|lower }}</li>
+        <li>upper - {{ protocolo|upper }}</li>
+        <li>first - {{ backend|first }}</li>
+
+    </ul>
+</article> {% endcomment %}
+
+{% comment %} <article>
+    <h2>Filtros en listas</h2>
+    {{ backend }}
+    <ul>
+    <li>first - {{ backend|first }}</li>
+    <li>last - {{ backend|last }}</li>
+    <li>join - {{ backend|join:", " }}</li>
+    <li>length - {{ backend|length }}</li>
+    <li>random - {{ backend|random }}</li>
+    </ul>
+</article> {% endcomment %}
+
+{% load misfiltros %}
+<article>
+    <h2>Filtros Personalizados</h2>
+    {{"Jimmy"|saludar|safe}}
+</article>
+
+{% load traducir_fecha %}
+<article>
+    <h2>Traducir fecha</h2>
+    Fecha: {{ fecha }}<br><br>
+    {{ fecha|traducir_fecha|safe }}
+</article>
+
+{% endblock %}
