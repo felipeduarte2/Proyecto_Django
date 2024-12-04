@@ -120,25 +120,3 @@ Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para
 Desarrollado por **Felipe de Jesús Duarte Castillo**  
 Correo: [fduartecastillo2@gmail.com](mailto:fduartecastillo2@gmail.com)  
 Portafolio: [https://felipeduarte2.github.io/portafolio](https://felipeduarte2.netlify.app/)
-
----
-
-### **¿Qué incluye este README.md?**
-1. **Introducción**: Explica el propósito del proyecto y las tecnologías utilizadas.
-2. **Funcionalidades**: Detalla las características clave.
-3. **Guía de instalación**: Proporciona instrucciones paso a paso para configurar y ejecutar el proyecto.
-5. **Estado del proyecto**: Indica las partes completadas y las que están en desarrollo.
-6. **Contribuciones y licencia**: Facilita la colaboración y define los derechos del proyecto.
-
----
-
-### **Próximos pasos**
-1. **Asegúrate de añadir las imágenes**:
-   - Sube capturas relevantes del proyecto y reemplaza las rutas `ruta/de/imagen-*.png` por sus ubicaciones reales.
-2. **Súbelo a GitHub**:
-   - Guarda el archivo como `README.md` y súbelo a tu repositorio.
-
-¿Te gustaría que trabajemos en otro proyecto o alguna sección específica? 😊
-
-
-
