@@ -1,6 +1,5 @@
 ### **README.md para "DjangoAIProject"**
 
-```markdown
 # DjangoAIProject
 
 **DjangoAIProject** es una aplicación web desarrollada con **Django**, diseñada como un sitio tipo blog para explorar temas de programación web e inteligencia artificial. Este proyecto fue realizado para las materias de **"Programación Web"** e **"Inteligencia Artificial"**.
@@ -121,7 +120,6 @@ Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para
 Desarrollado por **Felipe de Jesús Duarte Castillo**  
 Correo: [fduartecastillo2@gmail.com](mailto:fduartecastillo2@gmail.com)  
 Portafolio: [https://felipeduarte2.github.io/portafolio](https://felipeduarte2.netlify.app/)
-```
 
 ---
 
