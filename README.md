@@ -109,12 +109,6 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 ---
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para más información.
-
----
-
 ## 📧 Contacto
 
 Desarrollado por **Felipe de Jesús Duarte Castillo**  
